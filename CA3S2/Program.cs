@@ -7,22 +7,12 @@
         static void Main(string[] args)
         {
             shipfile[] mainShipFile;
+            shipfile[] shipFileRead;
             mainShipFile = readShip();
 
-            names(mainShipFile);
-            
             age(mainShipFile);
 
-           
-
-
-            //Console.WriteLine(mainShipFile[7].ManifestNum);//this how you sccces specific section
-
             int type = 0;
-
-            
-
-            
 
             do
             {
@@ -30,8 +20,15 @@
                 Console.WriteLine("Type \n 1.Ship Report\n 2.Occupation Report \n 3.Age Report \n 4.Exit");
                 type = int.Parse(Console.ReadLine());
 
-                if (type == 1)//This prints the details of thje ship and the names 
-                { 
+                if (type == 1)//This prints the details of the ship and the names 
+                {
+                    string entry="";
+                    Console.WriteLine("Enter ship you want to check:");
+                    entry = Console.ReadLine();
+
+                    shipFileRead = names(mainShipFile,entry);
+
+                    Console.WriteLine(shipFileRead.Length);
                     
                 }
                 else if (type == 2)
@@ -83,16 +80,11 @@
 
             int i = 0;
 
-
+            sr.ReadLine();
             //reads and stores passger data in the class object if i want to check something i can now use the class object
             while (recordIn != null)
             {
                 fields = recordIn.Split(',');
-
-                //Console.WriteLine($"{fields[0]}\t {fields[1]}\t{fields[2]}\t{fields[3]}\t{fields[4]}\t{fields[5]}\t{fields[6]}\t{fields[7]}\t{fields[8]}\t{fields[9]}");
-
-
-                
 
                 shipfile passenger = new shipfile(fields[0], fields[1], fields[2], fields[3], fields[4], fields[5], fields[6], fields[7], fields[8], fields[9]);
 
@@ -115,71 +107,47 @@
 
             shipfile[] nonEmptyShipFile= new shipfile[i];//creates a new file because last one has a load of empty variables
             
-            for(int j = 0; j < i; j++)//this goes through each lin up until it hits i amount of lines aka how many entrys there are and fills the new file
+            for(int j = 0; j < i; j++)//this goes through each line up until it hits i amount of lines aka how many entrys there are and fills the new file
             {
                 nonEmptyShipFile[j] = myShipFile[j];
-
             }
 
             return nonEmptyShipFile;
 
         }
-        static void names(shipfile[] mainShipFile)
+
+        static shipfile[] names(shipfile[] mainShipFile,string shipName)
         {
+
+            shipfile[] tempShip = new shipfile[amountOfPassengers];
             
-            shipfile[] maryShip = new shipfile[amountOfPassengers];
-            shipfile[] lincShip = new shipfile[amountOfPassengers];
-            shipfile[] clareShip = new shipfile[amountOfPassengers];
-            shipfile[] dispatchShip = new shipfile[amountOfPassengers];
 
-            for (int k = 0; k < amountOfPassengers; k++)//can use myShipFile.Length instead of amont
+            for (int k = 0; k < amountOfPassengers; k++)//can use myShipFile.Length instead of amount
             {
-                if (mainShipFile[k].ManifestNum == "MARY HARRINGTON  187  07-06-1848  102")
+                if (mainShipFile[k].ManifestNum == shipName)
                 {
 
-                    maryShip[k] = mainShipFile[k];
-                    //Console.WriteLine($"First Name {maryShip[k].PassengerFirstName} : Last Name {maryShip[k].PassengerSurname}");
+                    tempShip[k] = mainShipFile[k];
+                    Console.WriteLine($"First Name {tempShip[k].PassengerFirstName} : Last Name {tempShip[k].PassengerSurname}");
 
-                    //Console.WriteLine($"{maryShip[k].ManifestNum} :leaving from {maryShip[k]}");//this is top line of q we can use this somewhere else if really needed
-
+                    
                     passengersMary = k;
-                    //Console.WriteLine(maryShip[k].PassengerSurname);
+                    
 
                 }
-                else if (mainShipFile[k].ManifestNum == "LINCOLN 187 02-05-1849 071")
-                {
-
-
-                    lincShip[k] = mainShipFile[k];
-                    //Console.WriteLine($"First Name {lincShip[k].PassengerFirstName}");
-                }
-                else if (mainShipFile[k].ManifestNum == "CLARE 187 06-06-1849 123")
-                {
-                    clareShip[k] = mainShipFile[k];
-                }
-                else if (mainShipFile[k].ManifestNum == "DISPATCH 187 06-26-1851 049")
-                {
-                    dispatchShip[k] = mainShipFile[k];
-                }
+                
 
             }//end of for
-            string entry;
-            Console.WriteLine("Enter ship you want to check:");
-            entry = Console.ReadLine();
+
+            return tempShip;
+
+            
 
 
-            if (entry == "MARY HARRINGTON  187  07-06-1848  102")
-            {
-                Console.WriteLine("help");
-                for (int k = 0; k < amountOfPassengers; k++)
-                {
-                    Console.WriteLine($"First Name {maryShip[k].PassengerFirstName} : Last Name {maryShip[k].PassengerSurname}");
+            
 
-                }
-            }
-
-            //Console.WriteLine($"{fields[1]}   {fields[0]}");//could possibly use this and just find the int to end at but 
-            //starting at the otehrs would need to be taking their number away from the number of total
+            
+            
         }//end of method
 
         static void occupation(shipfile[] mainShipFiles)
@@ -349,14 +317,74 @@
             int olderAdult = 0;
             int unknown = 0;
 
-            for (int k = 0; k < amountOfPassengers; k++)
+            
+
+            for (int k = 1; k < amountOfPassengers; k++)
             {
-                //if (mainShipFiles[k].Age<= 0)
 
 
+                int infantsCounter = 0;
+                int unknownCounter = 0;
+
+                //making an if to pull the unknonws and infants out 1st then array for the rest
+
+                
+                string[] age=new string[amountOfPassengers];
+                int[] ageNumber = new int[amountOfPassengers];
+                age = mainShipFiles[k].Age.Split(' ');
+
+                Console.WriteLine(age[1]);
+
+                if (age[0]=="Infant")
+                {
+                    infants++;
+                }
+                else if(age[0]=="Unknown")
+                {
+                    unknown++;
+                }
+                else if (age[0]=="Age")
+                {
+
+                    // take the age[1 and make it into  a parse itn for age then send it to the if
+                    //parse age[1]
+
+                    //age[1].
 
 
+                }
 
+
+                //if (mainShipFiles[k].Age <= 0)
+                //{
+                //    infants++;
+
+                //}
+                //else if(mainShipFiles[k].Age >= 1 && mainShipFiles[k].Age<=12)
+                //{
+                //    children++;
+                //}
+                //else if(mainShipFiles[k].Age >12 && mainShipFiles[k].Age <= 19)
+                //{
+
+                //    teen++;
+                //}
+                //else if(mainShipFiles[k].Age > 19 && mainShipFiles[k].Age <= 29)
+                //{
+                //    youngAdult++;
+                //}
+                //else if(mainShipFiles[k].Age >= 30 && mainShipFiles[k].Age < 50)
+                //{
+                //    adult++;
+                //}
+                //else if(mainShipFiles[k].Age >=50)
+                //{
+                //    olderAdult++;
+                //}
+                //else
+                //{
+                //    unknown++;
+                //}
                         //need to ask how to get rid of the age part and deal with the strings of infant and unknown 
                         //otherwise bruteforce it the same as  the occupation method
 

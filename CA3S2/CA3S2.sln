@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32519.379
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CA3S2", "CA3S2.csproj", "{D439196F-A38F-4B12-B0F3-7BD0BD84D3CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CA3S2", "CA3S2.csproj", "{D439196F-A38F-4B12-B0F3-7BD0BD84D3CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ca3Test", "..\ca3Test\ca3Test.csproj", "{34A9F0D7-0DD1-4DA1-B1D1-B909CB1CE1BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{D439196F-A38F-4B12-B0F3-7BD0BD84D3CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D439196F-A38F-4B12-B0F3-7BD0BD84D3CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D439196F-A38F-4B12-B0F3-7BD0BD84D3CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34A9F0D7-0DD1-4DA1-B1D1-B909CB1CE1BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34A9F0D7-0DD1-4DA1-B1D1-B909CB1CE1BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34A9F0D7-0DD1-4DA1-B1D1-B909CB1CE1BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34A9F0D7-0DD1-4DA1-B1D1-B909CB1CE1BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

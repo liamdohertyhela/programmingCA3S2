@@ -94,7 +94,7 @@ namespace CA3S2
         }
 
         //constructor
-        public shipfile(string passengerFirstName, string passengerSurname, string age,string gender, string occupation, string departCountry, string destination, string passengerPort, string manifestNum, string date)
+        public shipfile(string passengerSurname, string passengerFirstName, string age,string gender, string occupation, string departCountry, string destination, string passengerPort, string manifestNum, string date)
         {
             PassengerFirstName = passengerFirstName;
             PassengerSurname = passengerSurname;
