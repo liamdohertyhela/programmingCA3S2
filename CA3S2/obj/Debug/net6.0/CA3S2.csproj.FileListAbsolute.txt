@@ -43,3 +43,18 @@ C:\Users\S00235065\OneDrive - Atlantic TU\MyProgramsSem2\CA3S2\bin\Debug\net6.0\
 C:\Users\S00235065\OneDrive - Atlantic TU\MyProgramsSem2\CA3S2\bin\Debug\net6.0\CA3S2.pdb
 C:\Users\S00235065\OneDrive - Atlantic TU\MyProgramsSem2\CA3S2\obj\Debug\net6.0\CA3S2.genruntimeconfig.cache
 C:\Users\S00235065\OneDrive - Atlantic TU\MyProgramsSem2\CA3S2\obj\Debug\net6.0\ref\CA3S2.dll
+C:\Users\liamh\OneDrive\Documents\GitHub\programmingCA3S2\CA3S2\bin\Debug\net6.0\CA3S2.exe
+C:\Users\liamh\OneDrive\Documents\GitHub\programmingCA3S2\CA3S2\bin\Debug\net6.0\CA3S2.deps.json
+C:\Users\liamh\OneDrive\Documents\GitHub\programmingCA3S2\CA3S2\bin\Debug\net6.0\CA3S2.runtimeconfig.json
+C:\Users\liamh\OneDrive\Documents\GitHub\programmingCA3S2\CA3S2\bin\Debug\net6.0\CA3S2.dll
+C:\Users\liamh\OneDrive\Documents\GitHub\programmingCA3S2\CA3S2\bin\Debug\net6.0\CA3S2.pdb
+C:\Users\liamh\OneDrive\Documents\GitHub\programmingCA3S2\CA3S2\obj\Debug\net6.0\CA3S2.csproj.AssemblyReference.cache
+C:\Users\liamh\OneDrive\Documents\GitHub\programmingCA3S2\CA3S2\obj\Debug\net6.0\CA3S2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\liamh\OneDrive\Documents\GitHub\programmingCA3S2\CA3S2\obj\Debug\net6.0\CA3S2.AssemblyInfoInputs.cache
+C:\Users\liamh\OneDrive\Documents\GitHub\programmingCA3S2\CA3S2\obj\Debug\net6.0\CA3S2.AssemblyInfo.cs
+C:\Users\liamh\OneDrive\Documents\GitHub\programmingCA3S2\CA3S2\obj\Debug\net6.0\CA3S2.csproj.CoreCompileInputs.cache
+C:\Users\liamh\OneDrive\Documents\GitHub\programmingCA3S2\CA3S2\obj\Debug\net6.0\CA3S2.dll
+C:\Users\liamh\OneDrive\Documents\GitHub\programmingCA3S2\CA3S2\obj\Debug\net6.0\refint\CA3S2.dll
+C:\Users\liamh\OneDrive\Documents\GitHub\programmingCA3S2\CA3S2\obj\Debug\net6.0\CA3S2.pdb
+C:\Users\liamh\OneDrive\Documents\GitHub\programmingCA3S2\CA3S2\obj\Debug\net6.0\CA3S2.genruntimeconfig.cache
+C:\Users\liamh\OneDrive\Documents\GitHub\programmingCA3S2\CA3S2\obj\Debug\net6.0\ref\CA3S2.dll
